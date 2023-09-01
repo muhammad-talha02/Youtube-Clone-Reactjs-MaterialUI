@@ -9,3 +9,5 @@ export {default as SearchFeed} from "../components/SearchFeed"
 
 // Export Components
 export {default as SearchBar} from "../components/SearchBar"
+export {default as Sidebar} from "../components/Sidebar"
+export {default as Videos} from "../components/Videos"
