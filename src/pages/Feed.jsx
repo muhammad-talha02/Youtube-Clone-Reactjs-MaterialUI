@@ -2,13 +2,15 @@ import { useState, useEffect } from "react";
 import { Stack, Box, Typography } from "@mui/material";
 import { Sidebar, Videos } from "../utils";
 import { fetchFromAPi } from "../utils/fetchApi";
-
+// import "../utils/fetchApi"
 const Feed = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Music");
-
+  const [selectedCategory, setSelectedCategory] = useState("new");
+  const [videos, setVideos] = useState([]);
   useEffect(() => {
-    // const rest = fetchFromAPi(`search?q=${selectedCategory}`);
-    // console.log(rest)
+    fetchFromAPi(`search?part=snippet&q=${selectedCategory}`).then((data) => {
+      setVideos(data.items);
+      console.log(data.items)
+    });
   }, [selectedCategory]);
 
   return (
@@ -33,7 +35,7 @@ const Feed = () => {
         <Typography variant="h4" fontWeight="bold" mb={2} color="white">
           {selectedCategory} <span style={{ color: "#FC1503" }}>Videos</span>
         </Typography>
-        <Videos />
+        <Videos videos={videos} />
       </Box>
     </Stack>
   );
