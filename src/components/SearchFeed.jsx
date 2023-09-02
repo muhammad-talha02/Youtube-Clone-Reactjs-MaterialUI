@@ -9,7 +9,6 @@ const SearchFeed = () => {
   useEffect(()=>{
 
 fetchFromAPi(`search?part=snippet&q=${searchTerm}`).then((data)=>{
-  console.log("searcg",data.items)
   setVideos(data.items)
 })
 

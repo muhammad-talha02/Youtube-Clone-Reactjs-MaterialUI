@@ -16,7 +16,6 @@ const ChannelDetail = () => {
     });
     fetchFromAPi(`search?channelId=${id}&part=snippet&order=date`).then(
       (data) => {
-        console.log(data.items);
         setChannelDetails(data?.items);
       }
     );
