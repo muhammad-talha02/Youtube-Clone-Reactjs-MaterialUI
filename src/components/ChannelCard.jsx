@@ -6,8 +6,9 @@ import {
   demoThumbnailUrl,
   demoVideoTitle,
   demoVideoUrl,
+  demoChannelTitle
 } from "../utils/constant";
-const ChannelCard = ({ channelDetail }) => {
+const ChannelCard = ({ channelDetail, marginTop }) => {
   return (
     <Box
     sx={{boxShadow:"none",
@@ -17,7 +18,8 @@ const ChannelCard = ({ channelDetail }) => {
     alignItems:"center",
     width:{xs:"356px", md:"320px"},
     height:"326px",
-    margin:"auto"
+    margin:"auto",
+    marginTop
     }}>
       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
         <CardContent
@@ -47,10 +49,15 @@ const ChannelCard = ({ channelDetail }) => {
             fontWeight="bold"
             color="gray"
           >
-            {channelDetail?.snippet?.channelTitle.slice(0, 60) ||
+            {channelDetail?.snippet?.title.slice(0, 60) ||
               demoChannelTitle.slice(0, 60)}
             <CheckCircle sx={{ ml: "5px", fontSize: 12 }} />
           </Typography>
+          {channelDetail?.statistics?.subscriberCount && (
+          <Typography sx={{ fontSize: '15px', fontWeight: 500, color: 'gray' }}>
+            {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString('en-US')} Subscribers
+          </Typography>
+        )}
         </CardContent>
       </Link>
     </Box>

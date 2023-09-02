@@ -4,12 +4,11 @@ import { Sidebar, Videos } from "../utils";
 import { fetchFromAPi } from "../utils/fetchApi";
 // import "../utils/fetchApi"
 const Feed = () => {
-  const [selectedCategory, setSelectedCategory] = useState("new");
+  const [selectedCategory, setSelectedCategory] = useState("New");
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     fetchFromAPi(`search?part=snippet&q=${selectedCategory}`).then((data) => {
       setVideos(data.items);
-      console.log(data.items)
     });
   }, [selectedCategory]);
 
@@ -27,11 +26,11 @@ const Feed = () => {
           setSelectedCategory={setSelectedCategory}
         />
 
-        <Typography variant="body2" mt={1.5} color="white">
-          Copyright @2023. MT Media
+        <Typography variant="body2" mt={1.5} display={{xs:"none", md:"block"}} color="white">
+          Copyright MT Media &copy; 2023
         </Typography>
       </Box>
-      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2, m:"auto" }}>
         <Typography variant="h4" fontWeight="bold" mb={2} color="white">
           {selectedCategory} <span style={{ color: "#FC1503" }}>Videos</span>
         </Typography>
