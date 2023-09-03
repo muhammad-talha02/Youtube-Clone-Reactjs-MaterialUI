@@ -70,6 +70,10 @@ a {
 .logo{
   display: inline-block;
 }
+.mobile_logo{
+  display: none;
+  border-radius: 11px;
+}
 @media screen and (max-width:800px){
   .copyright{
     display:none !important;
@@ -77,9 +81,12 @@ a {
   .logo{
     display: none;
   }
+  .mobile_logo{
+    display: inline-block;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 598px) {
   .scroll-horizontal {
     overflow: auto !important;
   }
@@ -89,5 +96,13 @@ a {
   }
   .search-bar{
     width:200px;
+  }
+  .video_card{
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 360px) {
+  .search-bar{
+    width:160px;
   }
 }
