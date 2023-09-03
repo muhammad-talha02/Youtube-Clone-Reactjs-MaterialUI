@@ -20,6 +20,7 @@ const ChannelDetail = () => {
       }
     );
   }, [id]);
+  if (!channel) return "Loading....";
 
   return (
     <Box minHeight="95vh">

@@ -30,7 +30,7 @@ const Feed = () => {
           Copyright MT Media &copy; 2023
         </Typography>
       </Box>
-      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2, m:"auto" }}>
+      <Box p={{xs:"4px", md:"16px"}} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
         <Typography variant="h4" fontWeight="bold" mb={2} color="white">
           {selectedCategory} <span style={{ color: "#FC1503" }}>Videos</span>
         </Typography>

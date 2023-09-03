@@ -98,7 +98,7 @@ a {
     width:200px;
   }
   .video_card{
-    width: 100% !important;
+    width: 100%;
   }
 }
 @media screen and (max-width: 360px) {
