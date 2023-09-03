@@ -11,7 +11,7 @@ const Feed = () => {
       setVideos(data.items);
     });
   }, [selectedCategory]);
-
+if(videos.length === 0) return <Loader/>
   return (
     <Stack sx={{ flexDirection: { xs: "column", md: "row" } }}>
       <Box

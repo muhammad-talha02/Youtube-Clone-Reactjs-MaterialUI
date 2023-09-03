@@ -13,9 +13,9 @@ import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 
 // export const logo = 'https://i.ibb.co/s9Qys2j/logo.png';
-export const logo = "./images/logo.webp";
-export const mobileLogo = "./images/fav.png";
-export const loader = "images/loader.gif";
+export const logo = "/images/logo.webp";
+export const mobileLogo = "/images/fav.png";
+export const loader = "/images/loader.gif";
 
 export const categories = [
   { name: "New", icon: <HomeIcon /> },

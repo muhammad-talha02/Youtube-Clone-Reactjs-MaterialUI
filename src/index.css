@@ -74,17 +74,17 @@ a {
 width: 150px;
 height: 150px;
 }
-@media screen and (max-width: 900px) {
-  .category-btn{
-    margin: 10px;
-  }
-}
 .logo{
   display: inline-block;
 }
 .mobile_logo{
   display: none;
   border-radius: 11px;
+}
+@media screen and (max-width: 900px) {
+  .category-btn{
+    margin: 10px;
+  }
 }
 @media screen and (max-width:800px){
   .copyright{
