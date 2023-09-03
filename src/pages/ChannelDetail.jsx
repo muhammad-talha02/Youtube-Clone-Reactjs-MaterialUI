@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { useParams } from "react-router-dom";
 import { Box } from "@mui/material";
-import { Videos, ChannelCard } from "../utils";
+import { Videos, ChannelCard, Loader } from "../utils";
 import { fetchFromAPi } from "../utils/fetchApi";
 const ChannelDetail = () => {
   const [channel, setChannel] = useState();
@@ -20,7 +20,7 @@ const ChannelDetail = () => {
       }
     );
   }, [id]);
-  if (!channel) return "Loading....";
+  if (!channel) return <Loader/>;
 
   return (
     <Box minHeight="95vh">

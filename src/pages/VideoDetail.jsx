@@ -4,7 +4,7 @@ import ReactPlayer from "react-player";
 import { Typography, Box, Stack } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 import { fetchFromAPi } from "../utils/fetchApi";
-import { Videos } from "../utils";
+import { Videos, Loader } from "../utils";
 const VideoDetail = () => {
   const { id } = useParams();
   const [video, setVideo] = useState();
@@ -17,7 +17,7 @@ const VideoDetail = () => {
       (data) => setVideos(data.items)
     );
   }, [id]);
-  if (!video?.snippet) return "Loading....";
+  if (!video?.snippet) return <Loader/>;
   const {
     snippet: { title, channelId, channelTitle },
     statistics: { viewCount, likeCount },

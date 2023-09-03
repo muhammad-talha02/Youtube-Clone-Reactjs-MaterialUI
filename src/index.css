@@ -61,7 +61,19 @@ a {
   border-radius: 20px;
   transition: all 0.3s ease;
 }
-
+.loader-box{
+  width: 100%;
+  height: 94vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  margin: auto;
+}
+.loader-box img{
+width: 150px;
+height: 150px;
+}
 @media screen and (max-width: 900px) {
   .category-btn{
     margin: 10px;
